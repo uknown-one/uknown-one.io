@@ -1,15 +1,24 @@
 name: Deploy Jekyll site
-on: [push]
+
+on:
+  push:
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: ruby/setup-ruby@v1
-        with: ruby-version: '3.2'
+        with:
+          ruby-version: '3.2'
+
       - run: gem install bundler jekyll
       - run: bundle install
       - run: bundle exec jekyll build
+
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
