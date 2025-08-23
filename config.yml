@@ -1,0 +1,7 @@
+title: Parallax Site Starter
+description: A Jekyll starter with parallax, navigation, animations & dark mode
+url: ""
+baseurl: ""
+theme: minima
+markdown: kramdown
+permalink: /:title/

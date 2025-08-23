@@ -1,0 +1,36 @@
+// Dark mode
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+.dark-mode .site-header {
+  background: rgba(20,20,20,0.85);
+  border-color: #333;
+}
+.dark-mode .site-footer { background: #111; color: #ccc; }
+.dark-mode .nav-link.active::after { background: #eee; }
+
+/* Dark toggle button styles */
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: rgba(0,0,0,0.05); z-index:1500;
+}
+.scroll-progress .bar {
+  height:100%; width:0%; background:#222; transition: width .2s ease;
+}
+
+/* Adjust bar under dark mode */
+.dark-mode .scroll-progress .bar {
+  background: #eee;
+}
