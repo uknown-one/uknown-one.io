@@ -2,9 +2,6 @@ title: Parallax Site Starter
 description: A Jekyll starter with parallax, navigation, animations & dark mode
 url: "https://github.com/uknown-one/uknown-one.io"
 baseurl: "https://uknown-one.github.io/uknown-one.io/"
-plugins:
-  - jekyll-seo-tag
-
 theme: minima
 markdown: kramdown
 permalink: /:title/
