@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta property="og:title" content="My Parallax Site">
+<meta property="og:description" content="Scroll-based animations, dark mode, and parallax sections.">
+<meta property="og:image" content="/assets/images/preview.jpg">
+<meta property="og:url" content="https://uknown-one.github.io/uknown-one.io/">
+<meta name="twitter:card" content="summary_large_image">
+
     <title>Home | </title>
     <meta name="description" content="gh-pages">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -11,20 +17,20 @@
     <div class="scroll-progress"><div class="bar"></div></div>
     <header class="site-header">
   <div class="inner">
-    <h1 class="logo"><a href="/"></a></h1>
+    <h1 class="logo"><a href="/">MYSite</a></h1>
     <nav class="nav" aria-label="Main nav">
       <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#features" class="nav-link">Features</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
-    <button class="hamburger" aria-label="Toggle menu">☰</button>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
   </div>
 </header>
 
     <main id="main">
-      <section id="home" class="parallax-section" data-speed="0.3" style="background-image:url('/assets/images/bg1.jpg');">
+      <section id="home" class="parallax-section" data-speed="0.3" style="background-image:url('/assets/images/bg1.jpg');" loading="lazy">
   <div class="overlay"><div class="content animate-on-scroll"><h2>Welcome</h2><p>Enjoy the scroll.</p></div></div>
 </section>
 
@@ -32,7 +38,7 @@
   <div class="wrapper"><h2 class="animate-on-scroll">About</h2><p class="animate-on-scroll">This is a parallax Jekyll site.</p></div>
 </section>
 
-<section id="features" class="parallax-section" data-speed="0.5" style="background-image:url('/assets/images/bg2.jpg');">
+<section id="features" class="parallax-section" data-speed="0.5" style="background-image:url('/assets/images/bg2.jpg');" loading="lazy">
   <div class="overlay"><div class="content animate-on-scroll"><h2>Features</h2><p>Parallax + nav + animations + dark mode.</p></div></div>
 </section>
 
