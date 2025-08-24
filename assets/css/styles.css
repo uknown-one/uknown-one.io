@@ -1,14 +1,83 @@
-// Dark mode
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode*/
 .dark-mode {
   background: #121212;
   color: #eee;
 }
 .dark-mode .site-header {
+  position:fixed;
+   top: 0; left: 0; right: 0;
   background: rgba(20,20,20,0.85);
   border-color: #333;
+   z-index: 1000;
+  padding: 0.5rem 1rem;
 }
+.site-header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6347;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
 .dark-mode .site-footer { background: #111; color: #ccc; }
 .dark-mode .nav-link.active::after { background: #eee; }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* Dark toggle button styles */
 .dark-toggle {
@@ -33,4 +102,70 @@
 /* Adjust bar under dark mode */
 .dark-mode .scroll-progress .bar {
   background: #eee;
+}
+/* Sections */
+.parallax-section, .normal-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.parallax-section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.overlay h2, .overlay p {
+  color: #fff;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
